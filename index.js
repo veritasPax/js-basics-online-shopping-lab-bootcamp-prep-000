@@ -26,7 +26,7 @@ function viewCart() {
   if (cart.length == 0) {
     console.log("Your shopping cart is empty.")
   } else {
-    var outStr = "In your cart you, have "
+    var outStr = "In your cart, you have "
     for (var i = 0; i < cart.length; i++) {
       var cartItem = Object.keys(cart[i])[0]
       if (cart.hasOwnProperty(cartItem)) {
