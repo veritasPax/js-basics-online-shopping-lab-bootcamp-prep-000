@@ -23,6 +23,7 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
+  //empty
   if (cart.length == 0) {
     console.log("Your shopping cart is empty.")
   } else {
@@ -34,18 +35,25 @@ function viewCart() {
       if (item.hasOwnProperty(itemName)) {
         var itemPrice = cart[i][itemName];
       }
+      //single item or last item in cart
       if (i == cart.length - 1) {
         outStr += `${itemName} at $${itemPrice}.`
-      } else if (i == cart.length - 2 && cart.length == 2) {
+      }
+      //penultimate item where cart has only two items 
+      else if (i == cart.length - 2 && cart.length == 2) {
         outStr += `${itemName} at $${itemPrice} and `
-      } else if (i == cart.length - 2 && cart.length !== 2) {
+      } 
+      //penultimate item where cart has > two items
+      else if (i == cart.length - 2 && cart.length !== 2) {
         outStr += `${itemName} at $${itemPrice}, and `
-      } else {
+      } 
+      //subsequent items
+      else {
         outStr += `${itemName} at $${itemPrice}, `
       }
     }
+    console.log(outStr)
   }
-  console.log(outStr)
 }
 
 function total() {
