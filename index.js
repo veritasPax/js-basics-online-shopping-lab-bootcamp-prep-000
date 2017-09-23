@@ -59,7 +59,7 @@ function total() {
   var total = 0
   for (var i = 0; i < cart.length; i++) {
     var item = cart[i]
-    var itemName = Object.keys(item)[0] 
+    var itemName = Object.keys(item)[0]
     var itemPrice = item[itemName]
 
     total += itemPrice
@@ -69,6 +69,15 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
+  for (var i = 0; i < cart.length; i++) {
+    var cartItem = cart[i]
+    if (cartItem.hasOwnProperty(item)) {
+      cart.splice(i, 1)
+      return cart
+    }
+  }
+  console.log("That item is not in your cart")
+  return cart
 }
 
 function placeOrder(cardNumber) {
