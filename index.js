@@ -39,14 +39,14 @@ function viewCart() {
       if (i == cart.length - 1) {
         outStr += `${itemName} at $${itemPrice}.`
       }
-      //penultimate item where cart has only two items 
+      //penultimate item where cart has only two items
       else if (i == cart.length - 2 && cart.length == 2) {
         outStr += `${itemName} at $${itemPrice} and `
-      } 
+      }
       //penultimate item where cart has > two items
       else if (i == cart.length - 2 && cart.length !== 2) {
         outStr += `${itemName} at $${itemPrice}, and `
-      } 
+      }
       //subsequent items
       else {
         outStr += `${itemName} at $${itemPrice}, `
