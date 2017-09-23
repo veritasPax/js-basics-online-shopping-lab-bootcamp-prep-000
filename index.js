@@ -35,9 +35,9 @@ function viewCart() {
         var itemPrice = cart[i][itemName];
       }
       if (i == cart.length - 1) {
-        outStr += `${itemName} at ${itemPrice}.`
+        outStr += `${itemName} at $${itemPrice}.`
       } else {
-        outStr += `${itemName} at ${itemPrice} and `
+        outStr += `${itemName} at $${itemPrice} and `
       }
     }
   }
