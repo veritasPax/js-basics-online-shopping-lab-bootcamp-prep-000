@@ -32,9 +32,7 @@ function viewCart() {
     for (var i = 0; i < cart.length; i++) {
       var item = cart[i]
       var itemName = Object.keys(cart[i])[0]
-      if (item.hasOwnProperty(itemName)) {
-        var itemPrice = cart[i][itemName];
-      }
+      var itemPrice = cart[i][itemName]
       //single item or last item in cart
       if (i == cart.length - 1) {
         outStr += `${itemName} at $${itemPrice}.`
@@ -58,6 +56,15 @@ function viewCart() {
 
 function total() {
   // write your code here
+  var total = 0
+  for (var i = 0; i < cart.length; i++) {
+    var item = cart[i]
+    var itemName = Object.keys(item)[0] 
+    var itemPrice = item[itemName]
+
+    total += itemPrice
+  }
+  return total
 }
 
 function removeFromCart(item) {
