@@ -27,17 +27,17 @@ function viewCart() {
     console.log("Your shopping cart is empty.")
   } else {
     var outStr = `In your cart, you have `
-    
+
     for (var i = 0; i < cart.length; i++) {
-      var currentItem = cart[i]
-      var currentItemName = Object.keys(cart[i])[0]
-      if (currentItem.hasOwnProperty(cartItem)) {
-        var ItemPrice = cart[i][cartItem];
+      var item = cart[i]
+      var itemName = Object.keys(cart[i])[0]
+      if (item.hasOwnProperty(itemName)) {
+        var itemPrice = cart[i][itemName];
       }
       if (i === cart.length - 1) {
-        outStr += `${currentItemName} at ${ItemPrice}.`
+        outStr += `${itemName} at ${itemPrice}.`
       } else {
-        outStr += `${currentItemName} at ${ItemPrice} and `
+        outStr += `${itemName} at ${itemPrice} and `
       }
     }
     console.log(outStr)
