@@ -56,15 +56,15 @@ function viewCart() {
 
 function total() {
   // write your code here
-  var total = 0
+  var totalCost = 0
   for (var i = 0; i < cart.length; i++) {
     var item = cart[i]
     var itemName = Object.keys(item)[0]
     var itemPrice = item[itemName]
 
-    total += itemPrice
+    totalCost += itemPrice
   }
-  return total
+  return totalCost
 }
 
 function removeFromCart(item) {
@@ -76,7 +76,7 @@ function removeFromCart(item) {
       return cart
     }
   }
-  console.log("That item is not in your cart")
+  console.log("That item is not in your cart.")
   return cart
 }
 
