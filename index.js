@@ -40,8 +40,8 @@ function viewCart() {
         outStr += `${itemName} at ${itemPrice} and `
       }
     }
-    console.log(outStr)
   }
+  console.log(outStr)
 }
 
 function total() {
