@@ -34,7 +34,7 @@ function viewCart() {
       if (item.hasOwnProperty(itemName)) {
         var itemPrice = cart[i][itemName];
       }
-      if (i === cart.length - 1) {
+      if (i == cart.length - 1) {
         outStr += `${itemName} at ${itemPrice}.`
       } else {
         outStr += `${itemName} at ${itemPrice} and `
