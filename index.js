@@ -29,14 +29,15 @@ function viewCart() {
     var outStr = `In your cart, you have `
     
     for (var i = 0; i < cart.length; i++) {
-      var cartItem = Object.keys(cart[i])[0]
-      if (cart.hasOwnProperty(cartItem)) {
+      var currentItem = cart[i]
+      var currentItemName = Object.keys(cart[i])[0]
+      if (currentItem.hasOwnProperty(cartItem)) {
         var ItemPrice = cart[i][cartItem];
       }
       if (i === cart.length - 1) {
-        outStr += `${cartItem} at ${ItemPrice}.`
+        outStr += `${currentItemName} at ${ItemPrice}.`
       } else {
-        outStr += `${cartItem} at ${ItemPrice} and `
+        outStr += `${currentItemName} at ${ItemPrice} and `
       }
     }
     console.log(outStr)
